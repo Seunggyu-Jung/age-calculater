@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>만나이 계산기</title>
+    <script>
+        const year2 = prompt("출생연도 입력", "");
+        const Tmonth = prompt("출생월 입력(두자리로 입력해주세요!)", "");
+        const Tdate = prompt("출생일 입력", "");
+
+        var num1;
+        num1 = Number(year2)
+        console.log(num1);
+
+        const date = new Date();   
+        const year1 = date.getFullYear();
+        let month1 = date.getMonth() + 1;
+        if (month1.toString().length < 2 ){
+            month1 = '0' + month1
+        }
+        const date1 = date.getDate();
+        console.log(year1);
+        console.log(month1);
+        console.log(date1);
+
+        const year3 = year1 - num1 - 2;
+        var year4;
+        if(Tmonth >= month1 && Tdate >= date1){
+            year4 = year3 + 1;
+        }    else{
+            year4 = year3;
+        }
+        console.log(year3);
+        console.log(Tmonth);
+        console.log(Tdate);
+        
+    </script> 
+</head>
+<body>
+     <h1>
+         "여러분의 만 나이를 계산해드립니다."
+     </h1>
+
+     
+    <script>
+        document.write("당신의 만 나이는 " + year4 + " 입니다!")
+    </script>    
+         
+</body>
+
+
+</html>
