@@ -23,12 +23,12 @@
         console.log(month1);
         console.log(date1);
 
-        const year3 = year1 - num1 - 1;
+        const year3 = year1 - num1;
         var year4;
-        if(Tmonth > month1  && Tdate > date1 ){
+        if(month1 >= Tmonth   && date1 > Tdate){
             year4 = year3;
         }    else{
-            year4 = year3 + 1;
+            year4 = year3 - 1;
         }
         console.log(year3);
         console.log(Tmonth);
